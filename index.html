@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of an Aspiring Artificial Intelligence Engineer and student at Zarqa Private University.">
+    <title>Ramadan Medhat | AI Student & Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Placeholder for icons, usually needs a real kit or CDN, I'll use SVGs if this fails or just unicode/custom SVGs -->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">Ramadan.AI</div>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <!-- Texture Overlay -->
+    <div class="grain-overlay"></div>
+
+    <div id="progress-bar"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="toolbar-top">
+        <div class="logo glitch-effect">Ramadan.AI</div>
+        <div class="toolbar-extras">
+            <div class="glass-pill" id="time-widget">
+                <i class="far fa-clock"></i> <span id="current-time">--:--</span>
+            </div>
+            <div class="glass-pill location-pill mobile-hide">
+                <i class="fas fa-map-marker-alt"></i> Jordan
+            </div>
+            <div class="glass-pill status-pill">
+                <span class="status-dot-small"></span> Online
+            </div>
+        </div>
+    </div>
+
+    <nav class="dock-container">
+        <div class="dock-glass">
+            <a href="#home" class="dock-item active" data-tooltip="Home"><i class="fas fa-home"></i></a>
+            <a href="#about" class="dock-item" data-tooltip="About"><i class="fas fa-user-astronaut"></i></a>
+            <a href="#skills" class="dock-item" data-tooltip="Skills"><i class="fas fa-code"></i></a>
+            <a href="#projects" class="dock-item" data-tooltip="Work"><i class="fas fa-layer-group"></i></a>
+            <a href="#contact" class="dock-item" data-tooltip="Connect"><i class="fas fa-paper-plane"></i></a>
+            <div class="dock-separator"></div>
+            <button id="theme-toggle" class="dock-item theme-item" data-tooltip="Theme"><i
+                    class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <div class="badge-ios">
+                <span class="status-dot"></span> Available for Work
+            </div>
+            <h2 class="sub-headline">Hello, I'm <span class="glitch-effect">Ramadan Medhat</span></h2>
+            <h1 class="headline">Future <span class="gradient-text typed-text"></span><span class="cursor">&nbsp;</span>
+            </h1>
+            <p class="description">Egyptian Undergraduate based in Jordan. Studying Artificial Intelligence at the
+                Faculty of Information Technology, Zarqa Private University.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn-ios primary">View Work</a>
+                <a href="#contact" class="btn-ios glass">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="avatar-container">
+                <img src="avatar.png" alt="Ramadan Medhat Avatar" class="hero-avatar">
+            </div>
+            <!-- Neural Network Animation Canvas will go here -->
+            <canvas id="neuralCanvas"></canvas>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="bento-grid">
+                <div class="bento-item large-item gradient-card">
+                    <h3>Who Am I?</h3>
+                    <p>I am <strong>Ramadan Medhat</strong>, a visionary student at <strong>Zarqa Private
+                            University</strong>. I don't just write code; I train machines to think.</p>
+                </div>
+                <div class="bento-item small-item glass-card image-bg-jordan">
+                    <h3>Location</h3>
+                    <p>Zarqa, Jordan</p>
+                    <i class="fas fa-map-marked-alt bento-icon"></i>
+                </div>
+                <div class="bento-item medium-item glass-card">
+                    <h3>Education</h3>
+                    <div class="edu-details">
+                        <span>Year 1</span>
+                        <strong>Artificial Intelligence</strong>
+                        <small>Faculty of IT</small>
+                    </div>
+                    <i class="fas fa-university bento-icon"></i>
+                </div>
+                <div class="bento-item small-item glass-card">
+                    <h3>Focus</h3>
+                    <p>Data & ML</p>
+                    <i class="fas fa-brain bento-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My Tools</h2>
+            <div class="ios-tabs">
+                <button class="tab-link active" onclick="openTab(event, 'Languages')">Languages</button>
+                <button class="tab-link" onclick="openTab(event, 'AI')">AI & Data</button>
+                <button class="tab-link" onclick="openTab(event, 'Tools')">Software</button>
+            </div>
+
+            <div id="Languages" class="tab-content active-tab">
+                <div class="skill-grid">
+                    <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+                    <div class="skill-pill"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skill-pill"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="skill-pill"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="skill-pill"><i class="fas fa-database"></i> SQL</div>
+                </div>
+            </div>
+
+            <div id="AI" class="tab-content">
+                <div class="skill-grid">
+                    <div class="skill-pill"><i class="fas fa-chart-bar"></i> Data Analysis</div>
+                    <div class="skill-pill"><i class="fas fa-robot"></i> Machine Learning</div>
+                    <div class="skill-pill"><i class="fas fa-brain"></i> Deep Learning (Basics)</div>
+                    <div class="skill-pill"><i class="fas fa-square-root-alt"></i> Algorithms</div>
+                </div>
+            </div>
+
+            <div id="Tools" class="tab-content">
+                <div class="skill-grid">
+                    <div class="skill-pill"><i class="fas fa-code"></i> VS Code</div>
+                    <div class="skill-pill"><i class="fab fa-github"></i> Git & GitHub</div>
+                    <div class="skill-pill"><i class="fas fa-book"></i> Jupyter</div>
+                    <div class="skill-pill"><i class="fab fa-figma"></i> Figma</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Exploring the capabilities of code and data.</p>
+            <div class="projects-grid">
+                <div class="project-card tilt-card">
+                    <div class="spotlight-overlay"></div>
+                    <div class="project-visual">
+                        <img src="project1.png" alt="Student Grade Predictor" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Student Grade Predictor</h3>
+                        <p>A regression model predicting student performance based on study hours and attendance.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Scikit-Learn</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card">
+                    <div class="spotlight-overlay"></div>
+                    <div class="project-visual">
+                        <img src="project2.png" alt="Data Analytics Dashboard" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Interactive dashboard visualizing complex datasets trends using Pandas and Plotly.</p>
+                        <div class="tags">
+                            <span>Pandas</span>
+                            <span>Plotly</span>
+                            <span>Dash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card">
+                    <div class="spotlight-overlay"></div>
+                    <div class="project-visual">
+                        <img src="project3.png" alt="AI Chatbot Interface" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Chatbot Assistant</h3>
+                        <p>A modern NLP-based chatbot capable of understanding context and answering queries.</p>
+                        <div class="tags">
+                            <span>NLP</span>
+                            <span>TensorFlow</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section footer-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm currently available for internships and collaborative projects. Feel free to reach out!</p>
+
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ramadanmedhat111@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fab fa-discord"></i>
+                            <span>romio_offical_78508</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Zarqa, Jordan</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons-group">
+                        <a href="https://wa.me/962775375204" target="_blank" class="btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> JO: 077 537 5204
+                        </a>
+                        <a href="https://wa.me/201151081814" target="_blank" class="btn whatsapp-btn secondary-wa">
+                            <i class="fab fa-whatsapp"></i> EG: 011 510 81814
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://t.me/LQ_OK" target="_blank" class="social-icon" title="Telegram"><i
+                                class="fab fa-telegram-plane"></i></a>
+                        <a href="https://www.snapchat.com/add/ramadan_med3459" target="_blank" class="social-icon"
+                            title="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                        <!-- Keeping Github as it's crucial for AI Portfolio, user can update later -->
+                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="mailto:ramadanmedhat111@gmail.com" method="post"
+                    enctype="text/plain">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Ramadan Medhat. Built with passion.</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
